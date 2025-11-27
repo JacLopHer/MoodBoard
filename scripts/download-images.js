@@ -17,33 +17,33 @@ if (!fs.existsSync(imagesDir)) {
 
 // URLs de imágenes REALES de Amazon para cada producto
 const images = {
-  // Libros - Imágenes reales de las portadas verificadas
-  'libro1.jpg': 'https://m.media-amazon.com/images/I/71DIua9ZGXL._SL1500_.jpg', // Utopía para realistas - REAL
-  'libro2.jpg': 'https://m.media-amazon.com/images/I/71LFnMS4-lL._SY342_.jpg', // Cómo mueren las democracias - REAL
-  'libro3.jpg': 'https://m.media-amazon.com/images/I/41H85-aKeTL._SY445_SX342_ML2_.jpg', // El infinito en un junco - REAL
-  'libro4.jpg': 'https://m.media-amazon.com/images/I/61DEzCAHBGL._SY342_.jpg', // Pensar rápido, pensar despacio - REAL
+  // Libros - Imágenes reales de Amazon
+  'libro1.jpg': 'https://m.media-amazon.com/images/I/71DIua9ZGXL._SL1500_.jpg', // Utopía para realistas
+  'libro2.jpg': 'https://m.media-amazon.com/images/I/71LFnMS4-lL._SL1500_.jpg', // Cómo mueren las democracias
+  'libro3.jpg': 'https://m.media-amazon.com/images/I/91h0DOJfyVL._SL1500_.jpg', // El infinito en un junco
+  'libro4.jpg': 'https://m.media-amazon.com/images/I/61DEzCAHBGL._SL1500_.jpg', // Pensar rápido, pensar despacio
   
-  // Ropa - Imágenes representativas genéricas (búsquedas, no productos específicos)
-  'pantalones-cargo-negro.jpg': 'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&q=80',
-  'pantalones-cargo-verde.jpg': 'https://images.unsplash.com/photo-1624378440070-7b44bc9e84c7?w=600&q=80',
-  'camisa-cuadros-rojo.jpg': 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&q=80',
-  'camisa-cuadros-azul.jpg': 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80',
-  'camisetas.jpg': 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80',
-  'sudadera.jpg': 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80',
-  'boxers.jpg': 'https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=600&q=80',
+  // Ropa - Imágenes reales de Amazon
+  'pantalones-cargo-negro.jpg': 'https://m.media-amazon.com/images/I/719NTaUKAoL._AC_SX466_.jpg',
+  'pantalones-cargo-verde.jpg': 'https://m.media-amazon.com/images/I/51U3VrcVY6L._AC_SX679_.jpg',
+  'camisa-cuadros-rojo.jpg': 'https://m.media-amazon.com/images/I/81JKiLBGOXL._AC_SX679_.jpg',
+  'camisa-cuadros-azul.jpg': 'https://m.media-amazon.com/images/I/81xZy+E4NpL._AC_SX569_.jpg',
+  'camisetas.jpg': 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80', // No proporcionada
+  'sudadera.jpg': 'https://m.media-amazon.com/images/I/71+4qWlN8VL._AC_SX569_.jpg',
+  'boxers.jpg': 'https://m.media-amazon.com/images/I/61BwM7rIdvL._AC_SX466_.jpg',
   
-  // Juegos de mesa - Imágenes genéricas de juegos de mesa (búsquedas)
-  'heroquest.jpg': 'https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?w=600&q=80',
-  'massive-darkness.jpg': 'https://images.unsplash.com/photo-1606167668584-78701c57f13d?w=600&q=80',
-  'descent.jpg': 'https://images.unsplash.com/photo-1632501641765-e568d28b0015?w=600&q=80',
-  'mice-mystics.jpg': 'https://images.unsplash.com/photo-1611891487583-91db657c763f?w=600&q=80',
+  // Juegos de mesa - Imágenes reales de Amazon
+  'heroquest.jpg': 'https://m.media-amazon.com/images/I/71DFESdCQXL._AC_SL1000_.jpg',
+  'massive-darkness.jpg': 'https://m.media-amazon.com/images/I/81gxPL2emtL._AC_SL1500_.jpg',
+  'descent.jpg': 'https://m.media-amazon.com/images/I/711u-CmusvS._AC_SL1024_.jpg',
+  'mice-mystics.jpg': 'https://m.media-amazon.com/images/I/61GlB2YR3AL._AC_SX679_.jpg',
   
-  // Prácticos - Imágenes genéricas representativas
-  'taza-termica.jpg': 'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=600&q=80',
-  'calcetines.jpg': 'https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=600&q=80',
-  'bufanda.jpg': 'https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=600&q=80',
-  'tarjeta-regalo.jpg': 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80',
-  'pinceles.jpg': 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80',
+  // Prácticos - Imágenes reales de Amazon
+  'taza-termica.jpg': 'https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=600&q=80', // No proporcionada
+  'calcetines.jpg': 'https://m.media-amazon.com/images/I/813MqRUbjXL._AC_SX466_.jpg',
+  'bufanda.jpg': 'https://m.media-amazon.com/images/I/81jB6wfGU6L._AC_SX466_.jpg',
+  'tarjeta-regalo.jpg': 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80', // No proporcionada
+  'pinceles.jpg': 'https://m.media-amazon.com/images/I/61FadwecflL._AC_SL1500_.jpg',
 };
 
 function downloadImage(url, filename) {
