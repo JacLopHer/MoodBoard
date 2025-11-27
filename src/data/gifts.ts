@@ -174,8 +174,8 @@ export const gifts: Gift[] = [
   },
   {
     id: 17,
-    title: "Tarjeta regalo Amazon",
-    description: "Para elegir lo que más me guste",
+    title: "Tarjeta regalo",
+    description: "Amazon, Steam, Trastero Mágico... para elegir",
     imageUrl: getImageUrl('tarjeta-regalo.jpg'),
     shopLink: "https://www.amazon.es/gp/product/B01N5OFOUC",
     category: "🎁 Práctico"
