@@ -9,7 +9,9 @@ export interface Gift {
 
 // Ahora usamos imágenes locales descargadas
 const getImageUrl = (localPath: string) => {
-  return `/images/${localPath}`;
+  // En producción (GitHub Pages) necesitamos el base path /MoodBoard/
+  const base = import.meta.env.BASE_URL || '/';
+  return `${base}images/${localPath}`;
 };
 
 export const gifts: Gift[] = [
