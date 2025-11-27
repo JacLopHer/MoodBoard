@@ -8,13 +8,13 @@ export interface Gift {
 }
 
 // En desarrollo, usamos el proxy de Vite (/amazon-images)
-// En producción, usamos corsproxy con la URL completa codificada
-const getImageUrl = (path: string) => {
+// En producción, usar placeholders por ahora (Amazon bloquea CORS)
+const getImageUrl = (_path: string) => {
   if (import.meta.env.DEV) {
-    return `/amazon-images${path}`;
+    return `/amazon-images${_path}`;
   }
-  // En producción, usar la URL completa de Amazon directamente
-  return `https://m.media-amazon.com${path}`;
+  // Placeholders de placeholder.com con colores y texto
+  return `https://via.placeholder.com/400x600/667eea/ffffff?text=${encodeURIComponent('Regalo')}`;
 };
 
 export const gifts: Gift[] = [
